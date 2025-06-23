@@ -17,7 +17,7 @@ class MyHashSet:
         bucket = self.locate_bucket(key)
         bucketitem = self.locate_bucketitems(key)
         if self.storage[bucket] == None:
-            self.storage[bucket] = [None] * self.bucketitems
+            self.storage[bucket] = [False] * self.bucketitems
         self.storage[bucket][bucketitem] = True  
          
     def remove(self, key: int) -> None:
